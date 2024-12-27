@@ -56,15 +56,15 @@ function Home() {
 
          <button
             title=""
-            onClick={handleSignIn} className="w-full border p-2 ml-2 rounded-lg hover:bg-blue-900 transition-all duration-1000 ease-in-out text-slate-100 bg-neutral-800">Sign In</button>
+            onClick={handleSignIn} className="w-full border p-2 ml-2 rounded-lg  transition-all duration-1000 ease-in-out text-slate-100 bg-neutral-800 hover:bg-slate-950">Sign In</button>
          <button title="Continue with google for free"
             onClick={handleSignWithGoogle}
-            className="border p-2 ml-2 rounded-lg hover:bg-blue-900 transition-all duration-1000 ease-in-out flex items-center justify-center gap-2 bg-neutral-800 text-slate-300 w-full m-2 ">Continue with Google
+            className="border p-2 ml-2 rounded-lg hover:bg-slate-950 transition-all duration-1000 ease-in-out flex items-center justify-center gap-2 bg-neutral-800 text-slate-300 w-full m-2 ">Continue with Google
             <FcGoogle className="text-2xl" />
          </button>
          <button
             onClick={handleSignOut}
-            className="w-full h-full border p-2 ml-2 rounded-lg hover:bg-red-800 transition-all duration-1000 ease-in-out cursor-pointer bg-neutral-800 text-slate-100">Sign out</button>
+            className="w-full h-full border p-2 ml-2 rounded-lg hover:bg-amber-950 transition-all duration-1000 ease-in-out cursor-pointer bg-amber-900 text-slate-100">Sign out</button>
 
       </div>
    )
