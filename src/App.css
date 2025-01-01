@@ -8,6 +8,8 @@ input{
   border: none;
   padding: 10px;
   border: 0.1px solid black;
+  /* color: black; */
+  background-color: rgb(82, 78, 78);
 }
 
 .homes{

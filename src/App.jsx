@@ -10,9 +10,8 @@ function App() {
       <Heeder />
       <div className='rounded-lg grid grid-cols-1 md:grid-cols-2 gap-5 bg--800 opacity-90 p-[20px]'>
         <Home />
-
-        <FireStore />
       </div>
+      <FireStore />
       <Modal />
     </div>
   )

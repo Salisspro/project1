@@ -1,5 +1,5 @@
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { FcGoogle } from "react-icons/fc";
 import { auth, googleAuth, } from "../config/FireBase"
 import { createUserWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth"
@@ -7,15 +7,22 @@ import { createUserWithEmailAndPassword, signInWithPopup, signOut } from "fireba
 
 
 
+
 console.log(auth?.currentUser?.email)
 
 function Home() {
+
+   const inputRef = useRef(null)
+
+
    const [email, setEmail] = useState("")
    const [password, setPassword] = useState("")
 
    const handleSignIn = async () => {
+      inputRef.current.value = ''
       try {
          await createUserWithEmailAndPassword(auth, email, password)
+
       } catch (err) {
          console.error(err);
       }
@@ -45,13 +52,17 @@ function Home() {
          </h1>
 
          <input
-            className="w-full "
+            className="w-full text-slate-300 bg-black"
             onChange={(e) => setEmail(e.target.value)}
-            type="text" name="" id="" placeholder="Email" />
+            ref={inputRef}
+            type="text"
+            placeholder="Email" />
          <input
-            className="w-full"
+            className="w-full bg-black text-slate-300"
             onChange={(e) => setPassword(e.target.value)}
-            type="password" name="" id="" placeholder="Password" />
+            ref={inputRef}
+            type="password"
+            placeholder="Password" />
 
 
          <button
@@ -73,4 +84,4 @@ function Home() {
 export default Home
 
 // import { GoIssueClosed } from "react-icons/go";
-{/* <GoIssueClosed /> */}
+{/* <GoIssueClosed /> */ }
